@@ -6,37 +6,37 @@
 #### Arithmetic ####
 
 # Pick a number; save it as x
-
+x = 10
 
 # Multiply x by 3
-
+y = 3 * x
 
 # Take the log of the above (Hint, you need the function log() here)
-
+z = log(y)
 
 # Subtract 4 from the above
-
+a = z -4
 
 # Square the above
-
+b = a^2
 
 #### Comparisons and Logical Operators ####
 
 # Check if 1 is bigger than 2
-
+1 > 2
 
 # Check if 1 + 1 is equal to 2
-
+(1+1) == 2
 
 # Check if it is true that the strings "eat" and "drink" are not equal to each other
-
+'eat' != 'drink'
 
 # Check if it is true that 1 is equal to 1 *AND* 1 is equal to 2 
 # (Hint: remember what the operators & and | do)
-
+(1 == 1) & (1 == 2)
 
 # Check if it is true that 1 is equal to 1 *OR* 1 is equal to 2
-
+(1==1) | (1==2)
 
 #### Packages and Functions ####
 
@@ -57,19 +57,19 @@ x1 <- rnorm(5)
 x2 <- rnorm(20, mean=0.5)
 
 # Select the 3rd element in x1
-
+x1[3]
 
 # Select the elements of x1 that are less than 0
-
+x1[x1<0]
 
 # Select the elements of x2 that are greater than 1
-
+x2[x2>1]
 
 # Create x3 containing the first five elements of x2
-
+x3 <- x2[1:5]
 
 # Select all but the third element of x1
-
+x1[-3]
 
 #### Missing values ####
 
@@ -77,10 +77,10 @@ x2 <- rnorm(20, mean=0.5)
 vec <- c(1, 8, NA, 7, 3)
 
 # Calculate the mean of vec, excluding the NA value
-
+mean(vec)
 
 # Count the number of missing values in vec
-
+sum(is.na(vec))
 
 #### Factors ####
 
@@ -98,10 +98,10 @@ vec <- c(1, 8, NA, 7, 3)
 mat <- matrix(c(1:51, rep(NA,4)), ncol=5)
 
 # Select row 4, column 5
-
+mat[4,5]
 
 # Select column 3
-
+mat[,3]
 
 # Bonus: How many NA values are there in this matrix?
 
@@ -112,19 +112,19 @@ mat <- matrix(c(1:51, rep(NA,4)), ncol=5)
 data(mtcars)
 
 # Identify the number of observations (rows) and number of variables (columns)
-
+    # look at the data under environment 
 
 # Identify the names of the variables
-
+rownames(mtcars)
 
 # Select the variable 'mpg'
-
+mtcars$mpg
 
 # Select the 4th row
-
+mtcars[4,]
 
 # Square the value of the 'cyl' variable and store this as a new variable 'cylsq'
-
+mtcars$cylsq <- (mtcars$cyl^2)
 
 #### READING FILES ####
 
